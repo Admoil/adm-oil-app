@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Visão Geral Executiva - Rede Pituba</title>
+<style>
+:root{--black:#111619;--black2:#1b2227;--yellow:#f7b500;--yellow2:#ffd76a;--bg:#eef1f3;--card:#fff;--text:#172127;--muted:#6e7d86;--line:#dde4e8;--green:#16a36a;--red:#e74c3c;--blue:#2d6fb7}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,select,input{font:inherit}.app{min-height:100vh}.sidebar{position:fixed;left:0;top:0;bottom:0;width:220px;background:linear-gradient(180deg,#101518,#181e22);color:#fff;padding:18px 12px;z-index:30;box-shadow:5px 0 18px #0002}.logo{font-size:29px;font-weight:900;letter-spacing:-1px;padding:4px 10px 20px;border-bottom:1px solid #ffffff18;margin-bottom:14px}.logo span{font-weight:300}.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:2px;color:#cdd5da;margin-top:4px}.nav{display:flex;flex-direction:column;gap:7px}.nav button{border:0;background:transparent;color:#e8edef;text-align:left;padding:13px 12px;border-radius:8px;cursor:pointer;font-weight:700;display:flex;gap:10px;align-items:center}.nav button.active{background:linear-gradient(90deg,var(--yellow),#ffc83f);color:#161a1d}.nav button:hover:not(.active){background:#ffffff0d}.sideFoot{position:absolute;left:22px;bottom:22px;font-size:10px;letter-spacing:2px;color:#bbc5ca;line-height:1.6;border-left:3px solid var(--yellow);padding-left:10px}.main{margin-left:220px;min-height:100vh}.topbar{background:var(--black);color:#fff;padding:17px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px;position:sticky;top:0;z-index:20}.topbar h1{margin:0;font-size:23px}.topbar small{color:#bfc9cf}.reload{background:var(--yellow);border:0;border-radius:8px;padding:10px 14px;font-weight:800;cursor:pointer}.status{font-size:11px;color:#c5cdd2;margin-left:auto}.content{padding:14px}.view{display:none}.view.active{display:block}.loading{background:#fff0b7;border:1px solid #f5d56a;color:#665100;border-radius:9px;padding:12px 14px;margin-bottom:12px;font-weight:700}.sectionHead{display:flex;justify-content:space-between;gap:14px;align-items:flex-end;margin-bottom:12px}.sectionHead h2{margin:0;font-size:24px}.sectionHead p{margin:3px 0 0;color:var(--muted);font-size:13px}.filters{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;margin-bottom:11px}.filters.f4{grid-template-columns:repeat(4,minmax(150px,1fr))}.filters.f3{grid-template-columns:repeat(3,minmax(150px,1fr))}.filter label{display:block;font-size:11px;font-weight:800;color:#667680;margin:0 0 5px 2px;text-transform:uppercase}.filter select,.filter input{width:100%;height:42px;border:1px solid #cbd6dc;border-radius:7px;padding:0 9px;background:#fff;color:#152027}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}.cards.fin3{grid-template-columns:repeat(3,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;min-height:105px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent,var(--yellow))}.card h3{margin:0 0 8px;font-size:12px;color:#566670;text-transform:uppercase}.kpi{font-size:25px;font-weight:900;letter-spacing:-.6px}.sub{font-size:11px;color:var(--muted);margin-top:5px}.good{color:var(--green)}.bad{color:var(--red)}.neutral{color:var(--muted)}.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;margin-bottom:10px}.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px;min-height:230px}.panel h3{margin:0 0 8px;font-size:16px}.hint{font-size:11px;color:var(--muted);margin-top:-4px;margin-bottom:8px}.chart{height:260px;overflow:auto}.barrow{display:grid;grid-template-columns:145px 1fr 110px;gap:8px;align-items:center;margin:9px 0;font-size:11px}.track{height:14px;background:#edf1f3;border-radius:3px;overflow:hidden}.bar{height:100%;border-radius:3px;background:var(--yellow)}.bar.green{background:var(--green)}.bar.red{background:var(--red)}.bar.blue{background:var(--blue)}.val{text-align:right;font-weight:800}.tablewrap{overflow:auto;max-height:470px;border:1px solid #e0e6ea;border-radius:9px}table{width:100%;border-collapse:collapse;font-size:11px;background:#fff}th,td{padding:8px 9px;border-bottom:1px solid #e7ecef;text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}thead{background:#edf1f3;position:sticky;top:0;z-index:2}tfoot{background:#fff1be;font-weight:900}.badge{display:inline-block;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:800}.badge.pago{background:#dff5eb;color:#14764f}.badge.pendente{background:#ffe2df;color:#ad2e24}.badge.jettax{background:#e5eef9;color:#2d6fb7}.monthBars{height:250px;display:flex;gap:12px;align-items:flex-end;padding:18px 8px 26px;border-bottom:1px solid #dfe5e8;overflow-x:auto}.monthGroup{min-width:86px;height:100%;display:flex;gap:5px;align-items:flex-end;position:relative}.mb{width:23px;border-radius:4px 4px 0 0;min-height:2px}.mb.sales{background:var(--yellow)}.mb.exp{background:#343c41}.mb.margin.pos{background:var(--green)}.mb.margin.neg{background:var(--red)}.monthLabel{position:absolute;bottom:-21px;left:0;right:0;text-align:center;font-size:10px;color:#687780}.legend{font-size:11px;color:#66747d;display:flex;gap:14px;flex-wrap:wrap;margin-bottom:5px}.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px}.warn{padding:9px 11px;background:#fff7da;border:1px solid #f0d56e;border-radius:8px;font-size:11px;color:#65520a;margin-bottom:10px;display:none}.piebox{display:flex;align-items:center;gap:18px;min-height:220px;justify-content:center}.pie{width:170px;height:170px;border-radius:50%;flex:0 0 170px;box-shadow:inset 0 0 0 1px #0001}.pieLegend{min-width:180px;font-size:11px}.pieItem{display:grid;grid-template-columns:12px 1fr auto;gap:7px;align-items:center;margin:8px 0}.pieDot{width:10px;height:10px;border-radius:2px}.piePct{font-weight:900}.pieEmpty{color:var(--muted);padding:40px 10px;text-align:center}.badge.rec{background:#dff5eb;color:#14764f}.badge.nrec{background:#ffe2df;color:#ad2e24}
+@media(max-width:1100px){.filters,.filters.f4,.filters.f3{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.grid2,.grid3{grid-template-columns:1fr}}
+@media(max-width:700px){body{padding-bottom:72px}.sidebar{top:auto;right:0;width:auto;height:66px;padding:6px;background:#111619;display:flex;align-items:center}.logo,.sideFoot{display:none}.nav{width:100%;flex-direction:row;gap:4px;overflow-x:auto}.nav button{min-width:110px;justify-content:center;text-align:center;padding:9px 8px;font-size:11px;flex-direction:column;gap:3px}.main{margin-left:0}.topbar{padding:12px 13px}.topbar h1{font-size:18px}.topbar small{display:none}.status{display:none}.content{padding:9px}.sectionHead h2{font-size:20px}.filters,.filters.f4,.filters.f3{grid-template-columns:1fr 1fr;padding:8px}.cards{gap:7px}.card{padding:11px;min-height:92px}.kpi{font-size:19px}.panel{padding:10px}.barrow{grid-template-columns:100px 1fr 88px}.tablewrap{max-height:400px}table{font-size:10px}th,td{padding:7px 6px}.chart{height:220px}}
+@media(max-width:420px){.filters,.filters.f4,.filters.f3{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.kpi{font-size:17px}}
+
+/* ADM OIL APP TESTE V2 - melhorias exclusivas para telas pequenas */
+@media(max-width:700px){
+ html{scroll-padding-bottom:110px}
+ body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px));overflow-x:hidden}
+ .app,.main,.content{min-width:0;max-width:100%}
+ .sidebar{height:calc(70px + env(safe-area-inset-bottom,0px));padding:5px 8px calc(5px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 18px #0002}
+ .nav{overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin}
+ .nav button{min-width:116px;min-height:52px;scroll-snap-align:start;line-height:1.25;white-space:normal}
+ .topbar{position:sticky;top:0;z-index:20;min-height:55px;background:var(--black);color:#fff}
+ .topbar h1{font-size:17px;line-height:1.3}
+ .content{padding:12px 10px 18px}
+ .filters,.filters.f4,.filters.f3{gap:9px;padding:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .filter,.filters>div{min-width:0}
+ input,select,button{max-width:100%}
+ select,input{min-height:42px;font-size:16px}
+ .cards,.cards.fin3{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .card{min-width:0;overflow-wrap:anywhere}
+ .kpi{font-size:clamp(17px,4.6vw,24px);overflow-wrap:anywhere}
+ .panel{min-width:0;overflow:hidden}
+ .chart{max-width:100%;height:230px}
+ .tablewrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+ table{min-width:560px}
+ .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:420px){
+ .filters,.filters.f4,.filters.f3{grid-template-columns:minmax(0,1fr)}
+ .cards,.cards.fin3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .nav button{min-width:108px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="logo">ADM <span>| Oil</span><small>REDE PITUBA</small></div>
+  <div class="nav">
+    <button class="active" data-view="geral">▦ Vendas Gerais</button>
+    <button data-view="faturamento">▤ Vendas de Combustíveis</button>
+    <button data-view="financeiro">▥ Despesas</button>
+    <button data-view="locacao">▣ Locação de Imóveis</button>
+    <button data-view="mercadoria">▧ Vendas de Mercadorias</button>
+    <button data-view="jettax">▨ Aquisição Compras de Combustíveis/Mercadorias</button>
+  </div>
+  <div class="sideFoot">TRABALHO<br>QUE ABASTECE<br>RESULTADOS</div>
+</aside>
+<div class="main">
+<header class="topbar"><div><h1 id="pageTitle">Vendas Gerais</h1><small id="pageSub">Receitas e gastos da rede</small></div><span class="status" id="status">Aguardando...</span><button id="reload" class="reload">Atualizar</button></header>
+<main class="content">
+  <div id="globalError" class="loading" style="display:none"></div>
+
+  <section id="view-geral" class="view active">
+    <div class="sectionHead"><div><h2>Vendas Gerais</h2><p>Resultado gerencial: VENDAS = Faturamento + Locação. COMPRAS = Jettax (incluindo mercadorias) + Planilha1 conciliada.</p></div></div>
+    <div id="loadGeral" class="loading">Carregando visão geral...</div>
+    <div class="filters f3"><div class="filter"><label>Mês</label><select id="geralMes"></select></div><div class="filter"><label>Posto</label><select id="geralPosto"></select></div></div>
+    <div id="geralAviso" class="warn" style="display:block">VENDAS somam Faturamento e Locação. COMPRAS somam Jettax e Planilha1 conciliada. Mercadorias do Jettax já estão incluídas em COMPRAS; não entram duas vezes. Duplicidades sem chave fiscal comum podem permanecer.</div>
+    <div class="cards"><div class="card"><h3>VENDAS</h3><div id="geralReceita" class="kpi">—</div></div><div class="card"><h3>COMPRAS</h3><div id="geralCompras" class="kpi">—</div></div><div class="card"><h3>Mercadorias no Jettax</h3><div id="geralDespesas" class="kpi">—</div></div><div class="card" style="--accent:#16a36a"><h3>Lucro geral estimado</h3><div id="geralLucro" class="kpi">—</div><div id="geralLucroPct" class="sub"></div></div></div>
+    <div class="grid2"><div class="panel"><h3>Vendas por origem</h3><div id="geralReceitasPie" class="piebox"></div></div><div class="panel"><h3>Compras por origem e categoria</h3><div id="geralComprasPie" class="piebox"></div></div></div>
+    <div class="panel"><h3>Lucro estimado por unidade</h3><div id="geralPostosRanking" class="chart"></div></div>
+  </section>
+
+  <section id="view-financeiro" class="view">
+    <div class="sectionHead"><div><h2>Despesas</h2><p>Saídas = Planilha1 + JETTAX (conciliação fiscal). Entradas = Combustíveis + Mercadorias WESA + Locação.</p></div></div>
+    <div id="loadFin" class="loading">Carregando despesas, compras e entradas...</div>
+    <div class="filters f4">
+      <div class="filter"><label>Mês</label><select id="finMes"></select></div>
+      <div class="filter"><label>Unidade</label><select id="finUnidade"></select></div>
+      <div class="filter"><label>Recorrência</label><select id="finRecorrencia"></select></div>
+      <div class="filter"><label>Serviço</label><select id="finServico"></select></div>
+    </div>
+    <div id="finWarn" class="warn"></div>
+    <div class="cards fin3">
+      <div class="card" style="--accent:#343c41"><h3>Total de gastos</h3><div class="kpi" id="finGastos">—</div><div class="sub" id="finGastosSub"></div></div>
+      <div class="card" style="--accent:#f7b500"><h3>Total de entradas</h3><div class="kpi" id="finVendas">—</div><div class="sub" id="finVendasSub"></div></div>
+      <div class="card" style="--accent:#16a36a"><h3>Lucro</h3><div class="kpi" id="finMargem">—</div><div class="sub" id="finMargemPct"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h3>Comparativo mensal</h3><div class="legend"><span><i style="background:#f7b500"></i>Entradas</span><span><i style="background:#343c41"></i>Gastos</span><span><i style="background:#16a36a"></i>Lucro positivo</span><span><i style="background:#e74c3c"></i>Lucro negativo</span></div><div id="finChart" class="monthBars"></div></div>
+      <div class="panel"><h3>Lucro por unidade</h3><div class="hint">(Combustíveis + Mercadorias + Locação) − (Planilha1 + JETTAX)</div><div id="finMargemUnidade" class="chart"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h3>Maiores gastos por serviço</h3><div id="finServicos" class="chart"></div></div>
+      <div class="panel"><h3>Entradas por unidade</h3><div id="finVendasUnidade" class="chart"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h3>% das despesas recorrentes</h3><div id="finPieRec" class="piebox"></div></div>
+      <div class="panel"><h3>% das despesas não recorrentes</h3><div id="finPieNRec" class="piebox"></div></div>
+    </div>
+    <div class="panel"><h3>Detalhamento das despesas</h3><div class="tablewrap"><table id="finTabela"><thead><tr><th>Unidade</th><th>Vencimento</th><th>Recorrência</th><th>Serviço</th><th>Parcela</th><th>Valor</th><th>Situação</th><th>Data pagamento</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+  <section id="view-faturamento" class="view">
+    <div class="sectionHead"><div><h2>Vendas de Combustíveis</h2><p>Vendas por posto e por produto, comparadas às compras de combustível do JETTAX.</p></div></div>
+    <div id="loadFat" class="loading" style="display:none">Carregando Faturamento...</div>
+    <div class="filters f3"><div class="filter"><label>Mês</label><select id="fatMes"></select></div><div class="filter"><label>Unidade</label><select id="fatPosto"></select></div><div class="filter"><label>Produto em destaque</label><select id="fatProduto"></select></div></div>
+    <div class="cards"><div class="card"><h3>Vendas totais</h3><div id="fatTotal" class="kpi">—</div></div><div class="card"><h3>Média por unidade</h3><div id="fatMedia" class="kpi">—</div></div><div class="card"><h3>Maior unidade</h3><div id="fatMaior" class="kpi">—</div><div id="fatMaiorVal" class="sub"></div></div><div class="card"><h3>Unidades</h3><div id="fatQtd" class="kpi">—</div></div></div>
+    <div class="cards fin3"><div class="card"><h3>Compras de combustível Jettax</h3><div class="kpi" id="fatCompra">—</div></div><div class="card" style="--accent:#16a36a"><h3>Lucro estimado de combustível</h3><div class="kpi" id="fatLucro">—</div><div class="sub" id="fatLucroPct"></div></div><div class="card"><h3>Critério</h3><div class="sub">Venda de combustível − compras Jettax classificadas como Combustíveis no período. Não equivale à margem contábil.</div></div></div>
+    <div class="grid2"><div class="panel"><h3>Ranking de vendas</h3><div id="fatRanking" class="chart"></div></div><div class="panel"><h3>Venda por produto</h3><div id="fatProdutos" class="chart"></div></div></div>
+    <div class="panel" style="margin-bottom:10px"><h3>Venda x compra de combustível</h3><div class="hint">Compara o valor vendido com o valor comprado no JETTAX para os filtros selecionados.</div><div id="fatCompraVendaPie" class="piebox"></div></div>
+    <div class="panel"><h3>Detalhamento</h3><div class="tablewrap"><table id="fatTabela"><thead><tr><th>Posto</th><th>Mês</th><th>Total</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+  <section id="view-locacao" class="view">
+    <div class="sectionHead"><div><h2>Locação de Imóveis</h2><p>Receitas de locações, sublocações e demais contratos.</p></div></div>
+    <div id="loadLoc" class="loading" style="display:none">Carregando Locação...</div>
+    <div class="filters f3"><div class="filter"><label>Mês</label><select id="locMes"></select></div><div class="filter"><label>Unidade</label><select id="locPosto"></select></div><div class="filter"><label>Locação</label><select id="locTipo"></select></div></div>
+    <div class="cards"><div class="card"><h3>Total de locação</h3><div id="locTotal" class="kpi">—</div></div><div class="card"><h3>Média por item</h3><div id="locMedia" class="kpi">—</div></div><div class="card"><h3>Maior item</h3><div id="locMaior" class="kpi">—</div><div id="locMaiorVal" class="sub"></div></div><div class="card"><h3>Registros</h3><div id="locQtd" class="kpi">—</div></div></div>
+    <div class="grid2"><div class="panel"><h3>Locação por unidade</h3><div id="locRanking" class="chart"></div></div><div class="panel"><h3>Locação por tipo</h3><div id="locTipos" class="chart"></div></div></div>
+    <div class="panel"><h3>Detalhamento</h3><div class="tablewrap"><table id="locTabela"><thead><tr><th>Posto</th><th>Mês</th><th>Locação</th><th>Valor</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+  <section id="view-mercadoria" class="view">
+    <div class="sectionHead"><div><h2>Vendas de Mercadorias</h2><p>Vendas WESA por produto e grupo.</p></div></div>
+    <div id="loadMc" class="loading" style="display:none">Carregando Mercadorias...</div>
+    <div class="filters f4">
+      <div class="filter"><label>Data inicial</label><input type="date" id="mcDataIni"></div>
+      <div class="filter"><label>Data final</label><input type="date" id="mcDataFim"></div>
+      <div class="filter"><label>Mês</label><select id="mcMes"></select></div>
+      <div class="filter"><label>Posto</label><select id="mcPosto"></select></div>
+      <div class="filter"><label>Grupo</label><select id="mcGrupo"></select></div>
+      <div class="filter"><label>Produto</label><select id="mcProduto"></select></div>
+      <div class="filter"><label>Caixa</label><select id="mcCaixa"></select></div>
+    </div>
+    <div class="hint">Compras Jettax filtradas por mês e posto; filtros de grupo/produto/caixa e datas parciais afetam as vendas, não as compras, pois não há correspondência item a item.</div><div class="cards"><div class="card"><h3>Venda líquida</h3><div id="mcLiquido" class="kpi">—</div></div><div class="card"><h3>Compras de mercadorias Jettax</h3><div id="mcCompras" class="kpi">—</div></div><div class="card" style="--accent:#16a36a"><h3>Lucro estimado de mercadorias</h3><div id="mcLucro" class="kpi">—</div><div id="mcLucroPct" class="sub"></div></div><div class="card"><h3>Quantidade</h3><div id="mcQuantidade" class="kpi">—</div></div></div>
+    <div class="grid2"><div class="panel"><h3>Top produtos</h3><div id="mcTopProdutos" class="chart"></div></div><div class="panel"><h3>Venda por grupo</h3><div id="mcPorGrupo" class="chart"></div></div></div>
+    <div class="panel"><h3>Detalhamento</h3><div class="tablewrap"><table id="mcTabela"><thead><tr><th>Posto</th><th>Data</th><th>Caixa</th><th>Grupo</th><th>Produto</th><th>Qtd.</th><th>Unit.</th><th>Total</th><th>Desc.</th><th>Líquido</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+  <section id="view-jettax" class="view">
+    <div class="sectionHead"><div><h2>Aquisição Compras de Combustíveis/Mercadorias</h2><p>Compras das notas fiscais da aba JETAX COMPRAS NOTAS.</p></div></div>
+    <div id="loadJet" class="loading" style="display:none">Carregando notas JETTAX...</div>
+    <div class="filters f4">
+      <div class="filter"><label>Data inicial</label><input type="date" id="jetDataIni"></div>
+      <div class="filter"><label>Data final</label><input type="date" id="jetDataFim"></div>
+      <div class="filter"><label>Mês</label><select id="jetMes"></select></div>
+      <div class="filter"><label>Tipo</label><select id="jetTipo"></select></div>
+      <div class="filter"><label>Posto</label><select id="jetPosto"></select></div>
+      <div class="filter"><label>Produto</label><select id="jetProduto"></select></div>
+    </div>
+    <div id="jetWarn" class="warn"></div>
+    <div class="cards">
+      <div class="card"><h3>Total comprado</h3><div id="jetTotal" class="kpi">—</div></div>
+      <div class="card"><h3>Itens</h3><div id="jetQtd" class="kpi">—</div></div>
+      <div class="card"><h3>Maior posto</h3><div id="jetMaiorPosto" class="kpi">—</div><div id="jetMaiorPostoVal" class="sub"></div></div>
+      <div class="card"><h3>Maior produto</h3><div id="jetMaiorProduto" class="kpi">—</div><div id="jetMaiorProdutoVal" class="sub"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h3>Compras por posto</h3><div id="jetPorPosto" class="chart"></div></div>
+      <div class="panel"><h3>Compras por produto</h3><div id="jetPorProduto" class="chart"></div></div>
+    </div>
+    <div class="panel"><h3>Detalhamento</h3><div class="tablewrap"><table id="jetTabela"><thead><tr><th>Posto</th><th>Data de emissão</th><th>Tipo</th><th>Descrição do produto</th><th>Valor total</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+</main></div></div>
+<script>
+(()=>{'use strict';
+const el=id=>document.getElementById(id);const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(n)||0);const num=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:2}).format(Number(n)||0);const uniq=a=>Array.from(new Set(a.filter(v=>v!==''&&v!=null))).sort((a,b)=>String(a).localeCompare(String(b),'pt-BR'));const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+let DESP=[],FAT=[],LOC=[],MC=[],JET=[],COMP_FUEL=[],FIN_WESA=[],RESUMO=null;let loaded={financeiro:false,faturamento:false,locacao:false,mercadoria:false,jettax:false},active='faturamento';
+const titles={geral:['Vendas Gerais','Receitas, compras, despesas e lucro estimado'],financeiro:['Despesas','Saídas, entradas e lucro por unidade'],faturamento:['Vendas de Combustíveis','Vendas por posto e produto'],locacao:['Locação de Imóveis','Receitas de contratos e sublocações'],mercadoria:['Vendas de Mercadorias','Vendas de mercadorias WESA'],jettax:['Aquisição Compras de Combustíveis/Mercadorias','Compras de notas fiscais por posto e produto']};
+function monthName(p){if(!p)return'Todos os meses';const [y,m]=p.split('-');return ['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'][+m]+'/'+y}
+function fill(id,vals,blank,fmt){const n=el(id);const old=n.value;n.innerHTML='';if(blank!=null){let o=document.createElement('option');o.value='';o.textContent=blank;n.appendChild(o)}vals.forEach(v=>{let o=document.createElement('option');o.value=v;o.textContent=(fmt||String)(v);n.appendChild(o)});if([...n.options].some(o=>o.value===old))n.value=old}
+function refill(id,vals,blank,fmt){fill(id,vals,blank,fmt)}
+function agg(rows,key,val){const m={};rows.forEach(r=>{const k=r[key]||'SEM INFORMAÇÃO';m[k]=(m[k]||0)+(Number(r[val])||0)});return Object.keys(m).map(k=>({k,v:m[k]}))}
+function bars(id,items,kind='yellow'){const n=el(id);if(!items.length){n.innerHTML='<div class="neutral">Sem dados.</div>';return}const mx=Math.max(1,...items.map(x=>Math.abs(x.v)));n.innerHTML=items.slice(0,20).map(x=>'<div class="barrow"><div title="'+esc(x.k)+'">'+esc(x.k)+'</div><div class="track"><div class="bar '+(kind==='signed'?(x.v>=0?'green':'red'):kind)+'" style="width:'+(Math.abs(x.v)/mx*100)+'%"></div></div><div class="val '+(kind==='signed'?(x.v>=0?'good':'bad'):'')+'">'+money(x.v)+'</div></div>').join('')}
+function pie(id,items){const n=el(id);items=(items||[]).filter(x=>Number(x.v)>0);const total=items.reduce((a,x)=>a+Number(x.v||0),0);if(!total){n.innerHTML='<div class="pieEmpty">Sem dados para este filtro.</div>';return}const cols=['#f7b500','#2d6fb7','#16a36a','#e74c3c','#7e57c2','#26a69a','#8d6e63','#78909c','#ef6c00','#5c6bc0'];let acc=0,stops=[];items.slice(0,10).forEach((x,i)=>{const ini=acc, fim=acc+(x.v/total*100);stops.push(cols[i%cols.length]+' '+ini.toFixed(2)+'% '+fim.toFixed(2)+'%');acc=fim});const legend=items.slice(0,10).map((x,i)=>'<div class="pieItem"><span class="pieDot" style="background:'+cols[i%cols.length]+'"></span><span title="'+esc(x.k)+'">'+esc(x.k)+'</span><span class="piePct">'+(x.v/total*100).toFixed(1).replace('.',',')+'%</span></div>').join('');n.innerHTML='<div class="pie" style="background:conic-gradient('+stops.join(',')+')"></div><div class="pieLegend">'+legend+'<div class="sub">Total: '+money(total)+'</div></div>'}
+function setView(v){active=v;document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));el('view-'+v).classList.add('active');el('pageTitle').textContent=titles[v][0];el('pageSub').textContent=titles[v][1];loadView(v)}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+function showErr(e){el('globalError').style.display='block';el('globalError').textContent='Erro: '+(e&&e.message?e.message:e);el('reload').disabled=false}
+function status(t){el('status').textContent=t}
+
+/* VISÃO GERAL E CUSTOS JETTAX - mantém gráficos e ordem das abas originais */
+function somaFiltro(rows,mes,posto,produto){return (rows||[]).filter(r=>(!mes||r.mes===mes)&&(!posto||r.posto===posto)&&(!produto||r.produto===produto)).reduce((a,r)=>a+(Number(r.valor)||0),0)}
+function linhasGeral(){
+ const m=el('geralMes').value,p=el('geralPosto').value;
+ const filtradas=a=>(a||[]).filter(r=>(!m||r.mes===m)&&(!p||r.posto===p));
+ return {v:filtradas(RESUMO.receitas),j:filtradas(RESUMO.compras),d:filtradas(RESUMO.despesas)};
+}
+function renderGeral(){
+ if(!RESUMO)return;
+ const {v,j,d}=linhasGeral();
+ const soma=a=>a.reduce((t,r)=>t+(Number(r.valor)||0),0);
+ const vendas=soma(v),compJ=soma(j),desp=soma(d),compras=compJ+desp,lucro=vendas-compras;
+ const merc=soma(j.filter(r=>r.categoria==='Mercadorias'));
+ el('geralReceita').textContent=money(vendas);
+ el('geralCompras').textContent=money(compras);
+ el('geralDespesas').textContent=money(merc);
+ el('geralLucro').textContent=money(lucro);
+ el('geralLucro').className='kpi '+(lucro>=0?'good':'bad');
+ el('geralLucroPct').textContent=vendas?(lucro/vendas*100).toFixed(1).replace('.',',')+'% sobre VENDAS':'Sem vendas';
+ pie('geralReceitasPie',agg(v,'categoria','valor'));
+ const conjunto=j.concat(d.map(r=>({categoria:'Planilha1 - '+r.categoria,valor:r.valor})));
+ pie('geralComprasPie',agg(conjunto,'categoria','valor'));
+ const postos=uniq([...v,...j,...d].map(r=>r.posto));
+ bars('geralPostosRanking',postos.map(k=>({k,v:soma(v.filter(r=>r.posto===k))-soma(j.filter(r=>r.posto===k))-soma(d.filter(r=>r.posto===k))})).sort((a,b)=>b.v-a.v),'signed');
+}
+function refreshGeralFacets(changed){
+ if(!RESUMO)return;
+ const all=[...(RESUMO.receitas||[]),...(RESUMO.compras||[]),...(RESUMO.despesas||[])];
+ const m=el('geralMes').value,p=el('geralPosto').value;
+ // Preserva o filtro que o usuário acabou de mudar e restringe o outro.
+ if(changed!=='geralPosto'){
+   refill('geralPosto',uniq(all.filter(r=>!m||r.mes===m).map(r=>r.posto)),'Todos os postos');
+ }
+ if(changed!=='geralMes'){
+   refill('geralMes',uniq(all.filter(r=>!p||r.posto===p).map(r=>r.mes)).sort(),'Todos os meses',monthName);
+ }
+}
+function initGeral(){if(!RESUMO)return;const a=[...(RESUMO.receitas||[]),...(RESUMO.compras||[]),...(RESUMO.despesas||[])];fill('geralMes',uniq(a.map(r=>r.mes)).sort(),'Todos os meses',monthName);fill('geralPosto',uniq(a.map(r=>r.posto)),'Todos os postos');refreshGeralFacets();renderGeral()}
+['geralMes','geralPosto'].forEach(id=>el(id).onchange=()=>{refreshGeralFacets(id);renderGeral()});
+function compraCategoria(tipo,mes,posto){return somaFiltro((RESUMO&&RESUMO.compras||[]).filter(r=>r.categoria===tipo),mes,posto)}
+/* FINANCEIRO */
+function initFin(){
+  fill('finMes',uniq([...DESP.map(r=>r.p),...FAT.map(r=>r.p),...LOC.map(r=>r.p),...FIN_WESA.map(r=>r.p)]).sort(),'Todos os meses',monthName);
+  fill('finUnidade',uniq([...DESP.map(r=>r.s),...FAT.map(r=>r.posto),...LOC.map(r=>r.posto),...FIN_WESA.map(r=>r.posto)]),'Todas as unidades');
+  fill('finRecorrencia',uniq(DESP.map(r=>r.tipoDespesa)),'Todas');
+  fill('finServico',uniq(DESP.map(r=>r.servico)),'Todos os serviços');
+  refreshFinFacets();
+}
+function finRows(){
+  const m=el('finMes').value,u=el('finUnidade').value,t=el('finRecorrencia').value,s=el('finServico').value;
+  return DESP.filter(r=>(!m||r.p===m)&&(!u||r.s===u)&&(!t||r.tipoDespesa===t)&&(!s||r.servico===s));
+}
+function fatFinRows(){const m=el('finMes').value,u=el('finUnidade').value;return FAT.filter(r=>(!m||r.p===m)&&(!u||r.posto===u))}
+function wesaFinRows(){const m=el('finMes').value,u=el('finUnidade').value;return FIN_WESA.filter(r=>(!m||r.p===m)&&(!u||r.posto===u))}
+function locFinRows(){const m=el('finMes').value,u=el('finUnidade').value;return LOC.filter(r=>(!m||r.p===m)&&(!u||r.posto===u))}
+function refreshFinFacets(){
+  for(let i=0;i<2;i++){
+    const m=el('finMes').value,u=el('finUnidade').value,t=el('finRecorrencia').value,s=el('finServico').value;
+    const meses=uniq([
+      ...DESP.filter(r=>(!u||r.s===u)&&(!t||r.tipoDespesa===t)&&(!s||r.servico===s)).map(r=>r.p),
+      ...FAT.filter(r=>(!u||r.posto===u)).map(r=>r.p),
+      ...LOC.filter(r=>(!u||r.posto===u)).map(r=>r.p)
+    ]).sort();
+    refill('finMes',meses,'Todos os meses',monthName);
+    const unidades=uniq([
+      ...DESP.filter(r=>(!m||r.p===m)&&(!t||r.tipoDespesa===t)&&(!s||r.servico===s)).map(r=>r.s),
+      ...FAT.filter(r=>(!m||r.p===m)).map(r=>r.posto),
+      ...LOC.filter(r=>(!m||r.p===m)).map(r=>r.posto)
+    ]);
+    refill('finUnidade',unidades,'Todas as unidades');
+    refill('finRecorrencia',uniq(DESP.filter(r=>(!m||r.p===m)&&(!u||r.s===u)&&(!s||r.servico===s)).map(r=>r.tipoDespesa)),'Todas');
+    refill('finServico',uniq(DESP.filter(r=>(!m||r.p===m)&&(!u||r.s===u)&&(!t||r.tipoDespesa===t)).map(r=>r.servico)),'Todos os serviços');
+  }
+}
+function renderFin(){
+  const d=finRows(),f=fatFinRows(),l=locFinRows(),w=wesaFinRows();
+  const g=d.reduce((a,r)=>a+r.v,0),vf=f.reduce((a,r)=>a+r.total,0),vl=l.reduce((a,r)=>a+r.valor,0),vw=w.reduce((a,r)=>a+r.valor,0),entradas=vf+vl+vw,lucro=entradas-g,pct=entradas?lucro/entradas*100:0;
+  el('finGastos').textContent=money(g);el('finVendas').textContent=money(entradas);el('finMargem').textContent=money(lucro);el('finMargem').className='kpi '+(lucro>=0?'good':'bad');
+  el('finMargemPct').textContent=entradas?pct.toFixed(1).replace('.',',')+'% sobre as entradas':'Sem entradas no filtro';
+  el('finGastosSub').textContent=d.length+' lançamentos (Planilha1 + JETTAX)';
+  el('finVendasSub').textContent=money(vf)+' combustíveis + '+money(vw)+' mercadorias + '+money(vl)+' locações';
+  const mes=el('finMes').value,hasD=d.length>0,hasIn=(f.length+l.length+w.length)>0;
+  el('finWarn').style.display=(mes&&(!hasD||!hasIn))?'block':'none';
+  el('finWarn').textContent=mes&&(!hasD||!hasIn)?'Atenção: neste mês faltam dados de saída ou de entrada para uma comparação completa.':'';
+
+  const months=uniq([...DESP.map(r=>r.p),...FAT.map(r=>r.p),...LOC.map(r=>r.p),...FIN_WESA.map(r=>r.p)]).sort();
+  const vals=months.map(p=>{const u=el('finUnidade').value,t=el('finRecorrencia').value,s=el('finServico').value;const gd=DESP.filter(r=>r.p===p&&(!u||r.s===u)&&(!t||r.tipoDespesa===t)&&(!s||r.servico===s)).reduce((a,r)=>a+r.v,0);const vv=FAT.filter(r=>r.p===p&&(!u||r.posto===u)).reduce((a,r)=>a+r.total,0);const ll=LOC.filter(r=>r.p===p&&(!u||r.posto===u)).reduce((a,r)=>a+r.valor,0);const ww=FIN_WESA.filter(r=>r.p===p&&(!u||r.posto===u)).reduce((a,r)=>a+r.valor,0);const en=vv+ll+ww;return{p,g:gd,v:en,m:en-gd}});
+  const mx=Math.max(1,...vals.flatMap(x=>[x.g,x.v,Math.abs(x.m)]));
+  el('finChart').innerHTML=vals.map(x=>'<div class="monthGroup" title="Entradas '+money(x.v)+' | Gastos '+money(x.g)+' | Lucro '+money(x.m)+'"><div class="mb sales" style="height:'+(x.v/mx*100)+'%"></div><div class="mb exp" style="height:'+(x.g/mx*100)+'%"></div><div class="mb margin '+(x.m>=0?'pos':'neg')+'" style="height:'+(Math.abs(x.m)/mx*100)+'%"></div><div class="monthLabel">'+monthName(x.p)+'</div></div>').join('');
+
+  const units=uniq([...d.map(r=>r.s),...f.map(r=>r.posto),...l.map(r=>r.posto)]);
+  const mu=units.map(u=>({k:u,v:f.filter(r=>r.posto===u).reduce((a,r)=>a+r.total,0)+l.filter(r=>r.posto===u).reduce((a,r)=>a+r.valor,0)+w.filter(r=>r.posto===u).reduce((a,r)=>a+r.valor,0)-d.filter(r=>r.s===u).reduce((a,r)=>a+r.v,0)})).sort((a,b)=>b.v-a.v);
+  bars('finMargemUnidade',mu,'signed');bars('finServicos',agg(d,'servico','v').sort((a,b)=>b.v-a.v),'red');
+  const entradasUnidade=units.map(u=>({k:u,v:f.filter(r=>r.posto===u).reduce((a,r)=>a+r.total,0)+l.filter(r=>r.posto===u).reduce((a,r)=>a+r.valor,0)+w.filter(r=>r.posto===u).reduce((a,r)=>a+r.valor,0)})).filter(x=>x.v!==0).sort((a,b)=>b.v-a.v);
+  bars('finVendasUnidade',entradasUnidade,'yellow');
+
+  const basePie=DESP.filter(r=>(!el('finMes').value||r.p===el('finMes').value)&&(!el('finUnidade').value||r.s===el('finUnidade').value));
+  pie('finPieRec',agg(basePie.filter(r=>r.tipoDespesa==='RECORRENTE'),'servico','v').sort((a,b)=>b.v-a.v));
+  pie('finPieNRec',agg(basePie.filter(r=>r.tipoDespesa==='NÃO RECORRENTE'),'servico','v').sort((a,b)=>b.v-a.v));
+
+  el('finTabela').querySelector('tbody').innerHTML=d.slice().sort((a,b)=>a.dataVencimento.localeCompare(b.dataVencimento)).slice(0,700).map(r=>'<tr><td>'+esc(r.s)+'</td><td>'+esc(r.dataVencimento)+'</td><td><span class="badge '+(r.tipoDespesa==='RECORRENTE'?'rec':'nrec')+'">'+esc(r.tipoDespesa||'—')+'</span></td><td>'+esc(r.servico)+'</td><td>'+esc(r.parcela)+'</td><td>'+money(r.v)+'</td><td><span class="badge '+(r.situacao==='PAGO'?'pago':(r.situacao==='JETTAX'?'jettax':'pendente'))+'">'+esc(r.situacao||'—')+'</span></td><td>'+esc(r.dataPagamento||'—')+'</td></tr>').join('');
+}
+['finMes','finUnidade','finRecorrencia','finServico'].forEach(id=>el(id).onchange=()=>{refreshFinFacets();renderFin()});
+
+/* FATURAMENTO */
+const PROD=['ARLA','DIESEL COMUM','DIESEL S10','ETANOL','GASOLINA ADITIVADA','GASOLINA COMUM','GASOLINA PODIUM','GNV'];
+function initFat(){fill('fatMes',uniq(FAT.map(r=>r.p)),'Todos os meses',monthName);fill('fatPosto',uniq(FAT.map(r=>r.posto)),'Todas as unidades');fill('fatProduto',PROD,'Todos os produtos');refreshFatFacets()}
+function fatRows(){const m=el('fatMes').value,p=el('fatPosto').value;return FAT.filter(r=>(!m||r.p===m)&&(!p||r.posto===p))}
+function fatValue(r){const prod=el('fatProduto').value;return prod?(Number(r.produtos&&r.produtos[prod])||0):(Number(r.total)||0)}
+function compraFuelRows(){const m=el('fatMes').value,p=el('fatPosto').value,prod=el('fatProduto').value;return COMP_FUEL.filter(r=>(!m||r.p===m)&&(!p||r.posto===p)&&(!prod||r.produtoPadrao===prod))}
+function refreshFatFacets(){
+  for(let i=0;i<2;i++){
+    const m=el('fatMes').value,p=el('fatPosto').value,prod=el('fatProduto').value;
+    const meses=uniq(FAT.filter(r=>(!p||r.posto===p)&&(!prod||Number(r.produtos&&r.produtos[prod])!==0)).map(r=>r.p)).sort();
+    refill('fatMes',meses,'Todos os meses',monthName);
+    const postos=uniq(FAT.filter(r=>(!m||r.p===m)&&(!prod||Number(r.produtos&&r.produtos[prod])!==0)).map(r=>r.posto));
+    refill('fatPosto',postos,'Todas as unidades');
+    const base=FAT.filter(r=>(!m||r.p===m)&&(!p||r.posto===p));
+    const prods=PROD.filter(pr=>base.some(r=>Number(r.produtos&&r.produtos[pr])!==0));
+    refill('fatProduto',prods,'Todos os produtos');
+  }
+}
+function renderFat(){
+  const r=fatRows().filter(x=>fatValue(x)!==0),total=r.reduce((a,x)=>a+fatValue(x),0);
+  const by=Object.values(r.reduce((m,x)=>{m[x.posto]=m[x.posto]||{k:x.posto,v:0};m[x.posto].v+=fatValue(x);return m},{})).sort((a,b)=>b.v-a.v);
+  el('fatTotal').textContent=money(total);el('fatMedia').textContent=money(by.length?total/by.length:0);el('fatQtd').textContent=by.length;el('fatMaior').textContent=by[0]?by[0].k:'—';el('fatMaiorVal').textContent=by[0]?money(by[0].v):'';bars('fatRanking',by,'yellow');
+  const pf=el('fatProduto').value;const ps=(pf?[pf]:PROD).map(p=>({k:p,v:fatRows().reduce((a,x)=>a+(Number(x.produtos&&x.produtos[p])||0),0)})).filter(x=>x.v!==0).sort((a,b)=>b.v-a.v);bars('fatProdutos',ps,'blue');
+  const compras=compraFuelRows().reduce((a,x)=>a+Number(x.total||0),0);pie('fatCompraVendaPie',[{k:'VENDAS DE COMBUSTÍVEIS',v:total},{k:'COMPRAS DE COMBUSTÍVEIS',v:compras}]);
+  const ct=compraFuelRows().reduce((a,x)=>a+Number(x.total||0),0),lf=total-ct;el('fatCompra').textContent=money(ct);el('fatLucro').textContent=money(lf);el('fatLucro').className='kpi '+(lf>=0?'good':'bad');el('fatLucroPct').textContent=total?(lf/total*100).toFixed(1).replace('.',',')+'% das vendas':'Sem vendas';
+   el('fatTabela').querySelector('tbody').innerHTML=r.slice().sort((a,b)=>fatValue(b)-fatValue(a)).map(x=>'<tr><td>'+esc(x.posto)+'</td><td>'+monthName(x.p)+'</td><td>'+money(fatValue(x))+'</td></tr>').join('');
+}
+['fatMes','fatPosto','fatProduto'].forEach(id=>el(id).onchange=()=>{refreshFatFacets();renderFat()});
+
+/* LOCAÇÃO */
+function initLoc(){fill('locMes',uniq(LOC.map(r=>r.p)),'Todos os meses',monthName);fill('locPosto',uniq(LOC.map(r=>r.posto)),'Todas as unidades');fill('locTipo',uniq(LOC.map(r=>r.locacao)),'Todos os tipos');refreshLocFacets()}
+function locRows(){const m=el('locMes').value,p=el('locPosto').value,t=el('locTipo').value;return LOC.filter(r=>(!m||r.p===m)&&(!p||r.posto===p)&&(!t||r.locacao===t))}
+function refreshLocFacets(){
+  for(let i=0;i<2;i++){
+    const m=el('locMes').value,p=el('locPosto').value,t=el('locTipo').value;
+    refill('locMes',uniq(LOC.filter(r=>(!p||r.posto===p)&&(!t||r.locacao===t)).map(r=>r.p)).sort(),'Todos os meses',monthName);
+    refill('locPosto',uniq(LOC.filter(r=>(!m||r.p===m)&&(!t||r.locacao===t)).map(r=>r.posto)),'Todas as unidades');
+    refill('locTipo',uniq(LOC.filter(r=>(!m||r.p===m)&&(!p||r.posto===p)).map(r=>r.locacao)),'Todos os tipos');
+  }
+}
+function renderLoc(){const r=locRows(),total=r.reduce((a,x)=>a+x.valor,0),ord=r.slice().sort((a,b)=>b.valor-a.valor);el('locTotal').textContent=money(total);el('locMedia').textContent=money(r.length?total/r.length:0);el('locQtd').textContent=r.length;el('locMaior').textContent=ord[0]?ord[0].locacao:'—';el('locMaiorVal').textContent=ord[0]?(ord[0].posto+' • '+money(ord[0].valor)):'';bars('locRanking',agg(r,'posto','valor').sort((a,b)=>b.v-a.v),'yellow');bars('locTipos',agg(r,'locacao','valor').sort((a,b)=>b.v-a.v),'blue');el('locTabela').querySelector('tbody').innerHTML=ord.map(x=>'<tr><td>'+esc(x.posto)+'</td><td>'+monthName(x.p)+'</td><td>'+esc(x.locacao)+'</td><td>'+money(x.valor)+'</td></tr>').join('')}
+['locMes','locPosto','locTipo'].forEach(id=>el(id).onchange=()=>{refreshLocFacets();renderLoc()});
+
+/* MERCADORIAS */
+function mcDateOk(r,ignoreMonth=false){
+  const ini=el('mcDataIni').value,fim=el('mcDataFim').value,mes=el('mcMes').value,iso=brIso(r.data);
+  return (!ini||!iso||iso>=ini)&&(!fim||!iso||iso<=fim)&&(ignoreMonth||!mes||r.periodo===mes);
+}
+function initMc(){
+  fill('mcMes',uniq(MC.map(r=>r.periodo)).sort(),'Todos os meses',monthName);
+  fill('mcPosto',uniq(MC.map(r=>r.posto)),'Todos os postos');
+  fill('mcGrupo',uniq(MC.map(r=>r.grupo)),'Todos os grupos');
+  fill('mcProduto',uniq(MC.map(r=>r.produto)),'Todos os produtos');
+  fill('mcCaixa',uniq(MC.map(r=>r.caixa)),'Todos os caixas');
+  const datas=MC.map(r=>brIso(r.data)).filter(Boolean).sort();
+  if(datas.length){el('mcDataIni').min=datas[0];el('mcDataIni').max=datas[datas.length-1];el('mcDataFim').min=datas[0];el('mcDataFim').max=datas[datas.length-1]}
+  refreshMcFacets();
+}
+function mcRows(){
+  const p=el('mcPosto').value,g=el('mcGrupo').value,pr=el('mcProduto').value,c=el('mcCaixa').value;
+  return MC.filter(r=>mcDateOk(r)&&(!p||r.posto===p)&&(!g||r.grupo===g)&&(!pr||r.produto===pr)&&(!c||r.caixa===c));
+}
+function refreshMcFacets(){
+  for(let i=0;i<2;i++){
+    const p=el('mcPosto').value,g=el('mcGrupo').value,pr=el('mcProduto').value,c=el('mcCaixa').value;
+    refill('mcMes',uniq(MC.filter(r=>mcDateOk(r,true)&&(!p||r.posto===p)&&(!g||r.grupo===g)&&(!pr||r.produto===pr)&&(!c||r.caixa===c)).map(r=>r.periodo)).sort(),'Todos os meses',monthName);
+    refill('mcPosto',uniq(MC.filter(r=>mcDateOk(r)&&(!g||r.grupo===g)&&(!pr||r.produto===pr)&&(!c||r.caixa===c)).map(r=>r.posto)),'Todos os postos');
+    refill('mcGrupo',uniq(MC.filter(r=>mcDateOk(r)&&(!p||r.posto===p)&&(!pr||r.produto===pr)&&(!c||r.caixa===c)).map(r=>r.grupo)),'Todos os grupos');
+    refill('mcProduto',uniq(MC.filter(r=>mcDateOk(r)&&(!p||r.posto===p)&&(!g||r.grupo===g)&&(!c||r.caixa===c)).map(r=>r.produto)),'Todos os produtos');
+    refill('mcCaixa',uniq(MC.filter(r=>mcDateOk(r)&&(!p||r.posto===p)&&(!g||r.grupo===g)&&(!pr||r.produto===pr)).map(r=>r.caixa)),'Todos os caixas');
+  }
+}
+function renderMc(){const r=mcRows();el('mcLiquido').textContent=money(r.reduce((a,x)=>a+x.liquido,0));el('mcQuantidade').textContent=num(r.reduce((a,x)=>a+x.quantidade,0));const vendas=r.reduce((a,x)=>a+x.liquido,0);const compras=compraCategoria('Mercadorias',el('mcMes').value,el('mcPosto').value);el('mcCompras').textContent=money(compras);el('mcLucro').textContent=money(vendas-compras);el('mcLucro').className='kpi '+(vendas-compras>=0?'good':'bad');el('mcLucroPct').textContent=vendas?((vendas-compras)/vendas*100).toFixed(1).replace('.',',')+'% das vendas':'Sem vendas';bars('mcTopProdutos',agg(r,'produto','liquido').sort((a,b)=>b.v-a.v),'yellow');bars('mcPorGrupo',agg(r,'grupo','liquido').sort((a,b)=>b.v-a.v),'blue');el('mcTabela').querySelector('tbody').innerHTML=r.slice(0,700).map(x=>'<tr><td>'+esc(x.posto)+'</td><td>'+esc(x.data)+'</td><td>'+esc(x.caixa)+'</td><td>'+esc(x.grupo)+'</td><td>'+esc(x.produto)+'</td><td>'+num(x.quantidade)+'</td><td>'+money(x.valorUnitario)+'</td><td>'+money(x.total)+'</td><td>'+money(x.descontos)+'</td><td>'+money(x.liquido)+'</td></tr>').join('')}
+['mcMes','mcPosto','mcGrupo','mcProduto','mcCaixa','mcDataIni','mcDataFim'].forEach(id=>el(id).onchange=()=>{
+  if(el('mcDataIni').value&&el('mcDataFim').value&&el('mcDataIni').value>el('mcDataFim').value){
+    if(id==='mcDataIni')el('mcDataFim').value=el('mcDataIni').value;else el('mcDataIni').value=el('mcDataFim').value;
+  }
+  refreshMcFacets();renderMc();
+});
+
+/* JETTAX NOTAS */
+function jetDateOk(r,ignoreMonth=false){
+  const ini=el('jetDataIni').value,fim=el('jetDataFim').value,mes=el('jetMes').value,iso=brIso(r.data);
+  return (!ini||!iso||iso>=ini)&&(!fim||!iso||iso<=fim)&&(ignoreMonth||!mes||r.p===mes);
+}
+function initJet(){
+  fill('jetMes',uniq(JET.map(r=>r.p)).sort(),'Todos os meses',monthName);
+  fill('jetTipo',uniq(JET.map(r=>r.tipo)),'Todos os tipos');
+  fill('jetPosto',uniq(JET.map(r=>r.posto)),'Todos os postos');
+  fill('jetProduto',uniq(JET.map(r=>r.produto)),'Todos os produtos');
+  const datas=JET.map(r=>brIso(r.data)).filter(Boolean).sort();
+  if(datas.length){
+    el('jetDataIni').min=datas[0];el('jetDataIni').max=datas[datas.length-1];
+    el('jetDataFim').min=datas[0];el('jetDataFim').max=datas[datas.length-1];
+  }
+  refreshJetFacets();
+}
+function jetRows(){
+  const t=el('jetTipo').value,p=el('jetPosto').value,pr=el('jetProduto').value;
+  return JET.filter(r=>jetDateOk(r)&&(!t||r.tipo===t)&&(!p||r.posto===p)&&(!pr||r.produto===pr));
+}
+function refreshJetFacets(){
+  for(let i=0;i<2;i++){
+    const t=el('jetTipo').value,p=el('jetPosto').value,pr=el('jetProduto').value;
+    refill('jetMes',uniq(JET.filter(r=>jetDateOk(r,true)&&(!t||r.tipo===t)&&(!p||r.posto===p)&&(!pr||r.produto===pr)).map(r=>r.p)).sort(),'Todos os meses',monthName);
+    refill('jetTipo',uniq(JET.filter(r=>jetDateOk(r)&&(!p||r.posto===p)&&(!pr||r.produto===pr)).map(r=>r.tipo)),'Todos os tipos');
+    refill('jetPosto',uniq(JET.filter(r=>jetDateOk(r)&&(!t||r.tipo===t)&&(!pr||r.produto===pr)).map(r=>r.posto)),'Todos os postos');
+    refill('jetProduto',uniq(JET.filter(r=>jetDateOk(r)&&(!t||r.tipo===t)&&(!p||r.posto===p)).map(r=>r.produto)),'Todos os produtos');
+  }
+}
+function renderJet(){
+  const r=jetRows(),total=r.reduce((a,x)=>a+x.total,0);
+  const byPosto=agg(r,'posto','total').sort((a,b)=>b.v-a.v);
+  const byProd=agg(r,'produto','total').sort((a,b)=>b.v-a.v);
+  el('jetTotal').textContent=money(total);
+  el('jetQtd').textContent=r.length;
+  el('jetMaiorPosto').textContent=byPosto[0]?byPosto[0].k:'—';
+  el('jetMaiorPostoVal').textContent=byPosto[0]?money(byPosto[0].v):'';
+  el('jetMaiorProduto').textContent=byProd[0]?byProd[0].k:'—';
+  el('jetMaiorProdutoVal').textContent=byProd[0]?money(byProd[0].v):'';
+  bars('jetPorPosto',byPosto,'yellow');
+  bars('jetPorProduto',byProd,'blue');
+
+  const naoMapeados=uniq(JET.filter(x=>!x.mapeado).map(x=>x.postoOriginal));
+  el('jetWarn').style.display=naoMapeados.length?'block':'none';
+  el('jetWarn').textContent=naoMapeados.length
+    ? 'Atenção: '+naoMapeados.length+' nome(s) ainda sem associação ao padrão do painel: '+naoMapeados.join(' | ')
+    : '';
+
+  el('jetTabela').querySelector('tbody').innerHTML=r.slice().sort((a,b)=>b.data.localeCompare(a.data)).slice(0,1000).map(x=>
+    '<tr><td>'+esc(x.posto)+'</td><td>'+esc(x.data)+'</td><td><span class="badge '+(x.tipo==='COMBUSTÍVEL'?'jettax':'pago')+'">'+esc(x.tipo)+'</span></td><td>'+esc(x.produto)+'</td><td>'+money(x.total)+'</td></tr>'
+  ).join('');
+}
+['jetMes','jetTipo','jetPosto','jetProduto','jetDataIni','jetDataFim'].forEach(id=>el(id).onchange=()=>{
+  if(el('jetDataIni').value&&el('jetDataFim').value&&el('jetDataIni').value>el('jetDataFim').value){
+    if(id==='jetDataIni')el('jetDataFim').value=el('jetDataIni').value;else el('jetDataIni').value=el('jetDataFim').value;
+  }
+  refreshJetFacets();renderJet();
+});
+
+function brIso(s){const p=String(s||'').split('/');return p.length===3?p[2]+'-'+String(p[1]).padStart(2,'0')+'-'+String(p[0]).padStart(2,'0'):''}
+
+function loadView(v,force=false){if(v==='geral'){el('reload').disabled=true;el('loadGeral').style.display='block';google.script.run.withSuccessHandler(r=>{RESUMO=r;loaded.geral=true;initGeral();el('loadGeral').style.display='none';status('Visão geral atualizada');el('reload').disabled=false}).withFailureHandler(showErr).getResumoLucros();return;} if(loaded[v]&&!force)return;el('reload').disabled=true;status('Carregando '+titles[v][0]+'...');el('globalError').style.display='none';
+ if(v==='financeiro'){el('loadFin').style.display='block';google.script.run.withSuccessHandler(o=>{DESP=o&&o.despesas||[];FAT=o&&o.faturamento||[];LOC=o&&o.locacao||[];FIN_WESA=o&&o.wesa||[];loaded.financeiro=true;loaded.faturamento=true;loaded.locacao=true;initFin();renderFin();el('loadFin').style.display='none';status('Despesas atualizadas em '+new Date().toLocaleString('pt-BR'));el('reload').disabled=false}).withFailureHandler(showErr).getPainelFinanceiro(!!force)}
+ else if(v==='faturamento'){el('loadFat').style.display='block';google.script.run.withSuccessHandler(o=>{FAT=o&&o.faturamento||[];COMP_FUEL=o&&o.comprasCombustivel||[];loaded.faturamento=true;initFat();renderFat();el('loadFat').style.display='none';status('Vendas atualizadas em '+new Date().toLocaleString('pt-BR'));el('reload').disabled=false}).withFailureHandler(showErr).getPainelVendas(!!force)}
+ else if(v==='locacao'){el('loadLoc').style.display='block';google.script.run.withSuccessHandler(r=>{LOC=Array.isArray(r)?r:[];loaded.locacao=true;initLoc();renderLoc();el('loadLoc').style.display='none';status('Locação atualizada em '+new Date().toLocaleString('pt-BR'));el('reload').disabled=false}).withFailureHandler(showErr).getLocacao()}
+ else if(v==='mercadoria'){el('loadMc').style.display='block';google.script.run.withSuccessHandler(r=>{MC=Array.isArray(r)?r:[];loaded.mercadoria=true;initMc();if(!RESUMO){google.script.run.withSuccessHandler(v=>{RESUMO=v;renderMc()}).withFailureHandler(showErr).getResumoLucros()}else renderMc();el('loadMc').style.display='none';status('Mercadorias atualizadas em '+new Date().toLocaleString('pt-BR'));el('reload').disabled=false}).withFailureHandler(showErr).getMercadorias()}
+ else{el('loadJet').style.display='block';google.script.run.withSuccessHandler(r=>{JET=Array.isArray(r)?r:[];loaded.jettax=true;initJet();renderJet();el('loadJet').style.display='none';status('Aquisições atualizadas em '+new Date().toLocaleString('pt-BR'));el('reload').disabled=false}).withFailureHandler(showErr).getJettaxNotas(!!force)}}
+el('reload').onclick=()=>{loaded[active]=false;loadView(active,true)};loadView('geral');
+})();
+</script>
+</body></html>
